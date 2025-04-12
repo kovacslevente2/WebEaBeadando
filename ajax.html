@@ -3,35 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AJAX menü</title>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Web-programozás-1 Előadás Házi feladat</h1>
-    </header>
 
-    <nav>
-        <ul>
-            <li> <a href="index.html" class="">Fő oldal</a></li>
-            <li> <a href="crud.html" class="">Táblázat menü</a></li>
-            <li> <a href="html5.html" class="">HTML5 menü</a></li>
-            <li> <a href="chartjs.html" class="">ChartJS menü</a></li>
-            <li> <a href="ajax.html" class="active">Ajax menü</a></li>
-            <li> <a href="oojs.html" class="">OOJS menü </a></li>
-            <li> <a href="react.html" class=""> React alkalmazás</a></li>
-        </ul>
-    </nav>
+  <header>
+    <h1>Web-programozás-1 Előadás Házi feladat</h1>
+</header>
 
-    <aside>WebProgramozás</aside>
+<nav>
+    <ul>
+        <li> <a href="index.html" class="active">Fő oldal</a></li>
+        <li> <a href="crud.html" class="">Táblázat menü</a></li>
+        <li> <a href="html5.html" class="">HTML5 menü</a></li>
+        <li> <a href="chartjs.html" class="">ChartJS menü</a></li>
+        <li> <a href="ajax.html" class="">Ajax menü</a></li>
+        <li> <a href="oojs.html" class="">OOJS menü </a></li>
+        <li> <a href="react.html" class=""> React alkalmazás</a></li>
+    </ul>
+</nav>
 
-    <div>
-        Ajax menü
+<aside>WebProgramozás</aside>
+    <h1>AJAX menü</h1>
+    <div class="ajax">
+    <div id="code"></div>
+    
+    <div id="readDiv"></div>
+    
+    <div class="form-group">
+        <h2>Create New Record</h2>
+        <div>
+            <label>Név (Nem lehet üres, max 30):</label>
+            <input id="name1" type="text">
+        </div>
+        <div>
+            <label>Magasság (Nem lehet üres max 30):</label>
+            <input id="height1" type="text">
+        </div>
+        <div>
+            <label>Súly (Nem lehet üres, max 30):</label>
+            <input id="weight1" type="text">
+        </div>
+        <button onclick="create()">Create</button>
+        <div id="createResult" class="result"></div>
     </div>
+    
+    <div class="form-group">
+        <h2>Update Record</h2>
+        <div>
+            <label>ID (Nem lehet üres):</label>
+            <input id="idUpd" type="text">
+            <button onclick="getDataForId()">Get Data</button>
+        </div>
+        <div>
+            <label>Név (Nem lehet üres, max 30):</label>
+            <input id="name2" type="text">
+        </div>
+        <div>
+            <label>Magasság (Nem lehet üres, max 30):</label>
+            <input id="height2" type="text">
+        </div>
+        <div>
+            <label>Súly (Nem lehet üres, max 30):</label>
+            <input id="weight2" type="text">
+        </div>
+        <button onclick="update()">Update</button>
+        <div id="updateResult" class="result"></div>
+    </div>
+    
+    <div class="form-group">
+        <h2>Delete Record</h2>
+        <div>
+            <label>ID (Nem lehet üres):</label>
+            <input id="idDel" type="text">
+        </div>
+        <button onclick="deleteF()">Delete</button>
+        <div id="deleteResult" class="result"></div>
+    </div>
+  </div>
+
+    <script src="ajax.js"></script>
 
     <footer> 
-    <p>Készítő: Kovács Levente</p>
-    <p>Neptun kód: DSOCWP</p>
-</footer>
+      <p>Készítő: Kovács Levente</p>
+      <p>Neptun kód: DSOCWP</p>
+  </footer>
 </body>
 </html>

@@ -152,6 +152,9 @@ canvas#myChart {
     width: 50%;
     margin: auto;
 }
+.ajax{
+    margin-left: 10px;
+}
 
 footer {
     background-color: #333;
