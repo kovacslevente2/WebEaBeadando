@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>OOJS Parkoló Szimuláció</title>
     <link rel="stylesheet" href="styles.css">
+    
 </head>
 <body>
     <header>
@@ -25,13 +26,27 @@
 
     <aside>WebProgramozás</aside>
 
-    <div>
-        OOJS menü
+    <div class="controls">
+        <h2>Jármű Hozzáadása</h2>
+        <div class="vehicle-form">
+            <select id="vehicleType">
+                <option value="car">Személyautó</option>
+                <option value="truck">Teherautó</option>
+                <option value="motorcycle">Motorkerékpár</option>
+            </select>
+            <input type="text" id="licensePlate" placeholder="Rendszám">
+            <input type="text" id="brand" placeholder="Márka">
+            <button onclick="addVehicle()">Jármű Hozzáadása</button>
+        </div>
     </div>
 
+    <div id="parkingLot" class="parking-lot"></div>
+    <div id="vehicleInfo" class="vehicle-info"></div>
+
     <footer> 
-    <p>Készítő: Kovács Levente</p>
-    <p>Neptun kód: DSOCWP</p>
-</footer>
+        <p>Készítő: Kovács Levente</p>
+        <p>Neptun kód: DSOCWP</p>
+    </footer>
+    <script src="oojs.js"></script>
 </body>
 </html>
