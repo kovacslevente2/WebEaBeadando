@@ -112,11 +112,41 @@ label.validation-error{
 
 .filter-container {
     width: 50%;
-    margin: auto;
+    
+}
+.server
+{
+    margin-left:10px ;
 }
 
+.webworkers
+{
+    padding: 20px;
+}
 
+.geo {
+    padding: 10px;
+}
 
+.canv {
+    margin-left: 10px;
+}
+
+canvas {
+    width: auto; 
+    height: auto; 
+    display: block;
+    margin-right: auto;
+    margin-left: 10px ;
+}
+
+.rajz
+{
+    padding: 20px;
+}
+.svg{
+    margin-left: 10px;
+}
 
 footer {
     background-color: #333;
