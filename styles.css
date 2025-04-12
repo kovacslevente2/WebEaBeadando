@@ -148,6 +148,11 @@ canvas {
     margin-left: 10px;
 }
 
+canvas#myChart {
+    width: 50%;
+    margin: auto;
+}
+
 footer {
     background-color: #333;
     color: white;
