@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>React Alkalmazások</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <link rel="stylesheet" href="src/styles/App.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,25 +16,46 @@
 
     <nav>
         <ul>
-            <li> <a href="index.html" class="">Fő oldal</a></li>
-            <li> <a href="crud.html" class="">Táblázat menü</a></li>
-            <li> <a href="html5.html" class="">HTML5 menü</a></li>
-            <li> <a href="chartjs.html" class="">ChartJS menü</a></li>
-            <li> <a href="ajax.html" class="">Ajax menü</a></li>
-            <li> <a href="oojs.html" class="">OOJS menü </a></li>
-            <li> <a href="react.html" class="active"> React alkalmazás</a></li>
+            <li> <a href="index.html">Fő oldal</a></li>
+            <li> <a href="crud.html">Táblázat menü</a></li>
+            <li> <a href="html5.html">HTML5 menü</a></li>
+            <li> <a href="chartjs.html">ChartJS menü</a></li>
+            <li> <a href="ajax.html">Ajax menü</a></li>
+            <li> <a href="oojs.html">OOJS menü</a></li>
+            <li> <a href="react.html" class="active">React alkalmazás</a></li>
         </ul>
     </nav>
 
     <aside>WebProgramozás</aside>
 
-    <div>
-        React alkalmazás 
+    <div class="container">
+        <h1>React Alkalmazások</h1>
+        <div class="menu">
+            <button onclick="showApp('weather')">Időjárás</button>
+            <button onclick="showApp('colorcube')">Színes Kocka</button>
+        </div>
+        <div id="app-container" class="app-container"></div>
     </div>
 
+    <script src="src/components/WeatherApp.js"></script>
+    <script src="src/components/ColorCubeGame.js"></script>
+    <script>
+        function showApp(appName) {
+            const container = document.getElementById('app-container');
+            if (appName === 'weather') {
+                ReactDOM.render(React.createElement(window.WeatherApp), container);
+            } else if (appName === 'colorcube') {
+                ReactDOM.render(React.createElement(window.ColorCubeGame), container);
+            }
+        }
+
+       
+        showApp('weather');
+    </script>
+
     <footer> 
-    <p>Készítő: Kovács Levente</p>
-    <p>Neptun kód: DSOCWP</p>
-</footer>
+        <p>Készítő: Kovács Levente</p>
+        <p>Neptun kód: DSOCWP</p>
+    </footer>
 </body>
 </html>
